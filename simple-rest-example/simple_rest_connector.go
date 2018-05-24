@@ -57,15 +57,15 @@ var Stop = make(chan bool)
 // Data structure of simple data item provided by REST interface
 // Adapt this to your data structure
 type DataItem struct {
-	Name      string  `json:name`
-	Value     float32 `json:value`
-	Timestamp string  `json:timestamp`
+	Name      string  `json:"name"`
+	Value     float32 `json:"value"`
+	Timestamp string  `json:"timestamp"`
 }
 
 // The repsonse of REST interface
 // Adapt this to your data structure
 type Response struct {
-	DataItems []DataItem `json:"dataItems`
+	DataItems []DataItem `json:"dataItems"`
 }
 
 // starts a thread to receive data periodically and consumes messages from the global channels
